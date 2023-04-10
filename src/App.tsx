@@ -1,18 +1,17 @@
 import "./App.css";
-import { Heading } from "./components/Heading";
-import { Oscar } from "./components/Oscar";
-import { Status } from "./components/Status";
+import { Button } from "./components/Button";
+import { Input } from "./components/input";
 
 function App() {
   return (
     <div className="App">
-      <Status status='success'/>
-      <Heading>Placeholder text</Heading>
-      <Oscar>
-        <Heading>Quan goes to Alta</Heading>
-      </Oscar>
+      <Button handleClick={(event, id) => {
+        console.log('Button Clicked', event, id)
+      }}
+      />
+      <Input value='' handleChange={(event) => console.log(event)} />
     </div>
-  );
+  )
 }
 
 export default App;
